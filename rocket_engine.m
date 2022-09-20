@@ -46,7 +46,7 @@ y_low = -y;
 plot(x,y)
 hold on
 plot(x,y_low)
-hold on
+figure;
 xlim([-5 x(end)+5])
 ylim([-Re-10 Re+10])
 
