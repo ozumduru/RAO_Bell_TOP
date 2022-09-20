@@ -50,7 +50,7 @@ plot(x,y_low)
 daspect([1 1 1])
 
 xlim([-5 x(end)+5])
-ylim([-Re-10 Re+10])
+ylim([-max(y)-10 max(y)+10])
 
 figure;
 
