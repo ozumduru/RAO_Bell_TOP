@@ -46,8 +46,12 @@ y_low = -y;
 plot(x,y)
 hold on
 plot(x,y_low)
-figure;
+
+daspect([1 1 1])
+
 xlim([-5 x(end)+5])
 ylim([-Re-10 Re+10])
+
+figure;
 
 end
