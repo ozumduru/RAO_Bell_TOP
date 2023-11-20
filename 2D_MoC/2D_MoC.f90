@@ -64,7 +64,7 @@ program Two_Dim_MoC
    
  dydx_m = tan(alpha_m*pi/180); dydx_p = tan(alpha_p*pi/180); dydx0_m = tan(alpha0_m*pi/180)
       
- x(0)=0.d0;   y(0)=height_t;   y(1)=0.d0;  x(1) = -y(0)/dydx0_m(1)
+ x(0)=0.d0;   y(0)=height_t/2;   y(1)=0.d0;  x(1) = -y(0)/dydx0_m(1)
    
  do i=2,n
      x(i) = (y(0)-y(i-1) + dydx_p(i-1)*x(i-1))/(dydx_p(i-1) - dydx0_m(i))
@@ -85,7 +85,7 @@ program Two_Dim_MoC
      y(w_n(i)) = y(w_n(i)-1) + dydx_p(w_n(i)-1)*(x(w_n(i)) - x(w_n(i)-1))
  enddo
    
- print*, y(w_n(n)),height_e
+ print*, y(w_n(n)),height_e/2
 end program Two_Dim_MoC
       
 subroutine Prantl_Meyer(mach,gam, pm)
